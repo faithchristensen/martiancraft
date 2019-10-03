@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='icon' href='fc.png' type='image/x-icon'/>
+    <title>Faith Christensen / MartianCraft</title>
+    <style>
+        body {
+            width: 100%;
+            background-color: #FFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0
+        }
+
+        #header {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("images/StarBackground.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        #hello {
+            font-size: 35px;
+            font-family: 'Pacifico', cursive;
+        }
+        #martaincraft {
+        }
+
+        .title {
+            color: #fff;
+            font-size: 70px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        #stars {
+            width: 100%;
+            height: 100%;
+        }
+
+        #helloContainer {
+            display: flex;
+        }
+
+        #helloBlankSpace {
+            width: 460px;
+        }
+
+        #introductions {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            margin-top: 60px;
+        }
+
+        .introductions_line {
+            width: 300px;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .introductions_text {
+            padding: 15px;
+            padding-right: 50px;
+            padding-left: 50px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .about-slide {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 200px;
+            flex-wrap: wrap;
+        }
+
+
+        .about-slide-left-container {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .about-slide-right-container {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-img-container {
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 11px;
+        }
+
+        .about-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 11px;
+        }
+        
+
+        .about-img-backdrop {
+            width: 300px;
+            height: 300px;
+            border: 3px solid red;
+            border-radius: 11px;
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            z-index: -1;
+        }
+
+        .about-text-container {
+            width: 60%;
+        }
+
+        .about-text-container p {
+            font-size: 17px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #work {
+            width: 100%;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #viewTheWork {
+            width: 500px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            background-color: #E5E5E5;
+        }
+
+        #viewWorkText {
+            color: #FFF;
+            text-align: center;
+            padding-bottom: 360px;
+            font-size: 30px;
+            padding-top: 170px;
+            background-color: #000;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #caseStudies {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            top: -250px;
+        }
+
+        .case-study {
+            background-color: white;
+            height: 450px;
+            width: 300px;
+            margin: 20px;
+            border-radius: 11px;
+            overflow: auto;
+        }
+
+        .case-study a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .case-study-img {
+            max-width: 100%;
+        }
+
+        #footer {
+            background-color: #E5E5E5;
+            width: 100%;
+            padding-top: 0px;
+            margin-top: -200px;
+            padding-bottom: 100px;
+        }
+
+        #footerTextContainer {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footerText {
+            max-width: 700px;
+            padding: 20px;
+            font-size: 22px;
+            font-family: 'Roboto', sans-serif;
+        }
+        #footerText p {
+            margin-bottom: 30px;
+        }
+
+        #footerSocial {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #socialContainer {
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            margin: 15px;
+        }
+
+        #dribbleIcon {
+            background-color: tomato;
+        }
+
+        svg {
+            fill: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id='header'>
+         <!-- <img id='stars' src="StarBackground.png" alt="Stars"/> -->
+        <div id='helloContainer'>
+                <h1 id='hello' class='title'>Hello</h1>
+                <div id='helloBlankSpace'></div>
+        </div>
+        <H1 id='martaincraft' class='title'>MartainCraft</H1>
+    </div>
+    <div id='about'>
+        <!-- <div id='introductions'>
+            <div class='introductions_line'></div>
+            <div class='introductions_text'>INTRODUCTIONS ARE IN ORDER</div>
+            <div class='introductions_line'></div>
+        </div> -->
+
+
+        <div class='about-slide'>
+            <div class='about-slide-left-container'>
+
+                <div class='about-img-container'>
+                    <img class='about-img' src="images/self.jpg" alt="Self"/>
+                </div>
+                <div class='about-img-backdrop'></div>
+
+            </div>
+            <div class='about-slide-right-container'>
+                <div class='about-text-container'>
+                        <p>My name is Faith 👋</p>
+                        <p>I'm a UI/UX Designer</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class='about-slide'>
+            <div class='about-slide-left-container'>
+
+                <div class='about-img-container'>
+                        <img class='about-img' src="images/Hus.jpg" alt="Husband and Cat"/>
+                </div>
+                <div class='about-img-backdrop'></div>
+
+            </div>
+            <div class='about-slide-right-container'>
+                <div class='about-text-container'>
+                        <p>I currently live in Oregon</p>
+                        <p>with my husband Dallin</p>
+                        <p>and our polydactyl cat Paul..</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='about-slide'>
+            <div class='about-slide-left-container'>
+
+                <div class='about-img-container'>
+                        <img class='about-img' src="images/Robot.jpg" alt="Self"/>
+                </div>
+                <div class='about-img-backdrop'></div>
+
+            </div>
+            <div class='about-slide-right-container'>
+                <div class='about-text-container'>
+                        <p>When I'm not behind my laptop you will probably find me making homemade ice cream, reading books about Leonardo Da Vinci, or listening to astrophysics podcasts..</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='about-slide'>
+            <div class='about-slide-left-container'>
+
+                <div class='about-img-container'>
+                        <img class='about-img' src="images/Design.jpg" alt="Self"/>
+                </div>
+                <div class='about-img-backdrop'></div>
+
+            </div>
+            <div class='about-slide-right-container'>
+                <div class='about-text-container'>
+                        <p>As a UI/UX Designer, my days are filled researching and designing for native mobile, desktop, and web applications, as well as responsive websites.</p> 
+                        <br>
+                        <p>I have worked with SaaS startups, small businesses, and individual stakeholders designing their needed interfaces.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='about-slide'>
+                <div class='about-slide-left-container'>
+    
+                    <div class='about-img-container'>
+                            <img class='about-img' src="images/Work.jpg" alt="Self"/>
+                    </div>
+                    <div class='about-img-backdrop'></div>
+    
+                </div>
+                <div class='about-slide-right-container'>
+                    <div class='about-text-container'>
+                            <p>Self driven with an entrepreneurial spirit, I get out of bed in the mornings energized to make complex problems feel simple.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='about-slide'>
+                <div class='about-slide-left-container'>
+    
+                    <div class='about-img-container'>
+                            <img class='about-img' src="images/App.jpg" alt="iOS Application"/>
+                    </div>
+                    <div class='about-img-backdrop'></div>
+    
+                </div>
+                <div class='about-slide-right-container'>
+                    <div class='about-text-container'>
+                            <p>I want to design iOS interfaces for you!</p>
+                            <br>
+                            <p>Having designed native applications, I am very fluent in iOS Human Interface Guidelines.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='about-slide'>
+                    <div class='about-slide-left-container'>
+        
+                        <div class='about-img-container'>
+                                <img class='about-img' src="images/Paul.jpg" alt="Computer"/>
+                        </div>
+                        <div class='about-img-backdrop'></div>
+        
+                    </div>
+                    <div class='about-slide-right-container'>
+                        <div class='about-text-container'>
+                                <p>My favorite tools in my design process are Sketch and InVision, but I am also strongly practiced in Adobe Creative Suite and Zeplin.</p>
+                                <br> 
+                                <p>I am also well versed in basic front end languages such as HTML, CSS, and JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='about-slide'>
+                        <div class='about-slide-left-container'>
+            
+                            <div class='about-img-container'>
+                                    <img class='about-img' src="images/Astro.jpg" alt="Astronaut"/>
+                            </div>
+                            <div class='about-img-backdrop'></div>
+            
+                        </div>
+                        <div class='about-slide-right-container'>
+                            <div class='about-text-container'>
+                                    <p>I was drawn to apply to MartianCraft for a multitude of reasons, but I resonated exceptionally well with the company’s statement, “Software can be a positive change for the human experience. We are here to make things better”.</p>
+                                    <br>
+                                    <p>This is exactly what makes me love my role as a UI/UX Designer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+        <div id='work'>
+
+            <div id='viewTheWork'>
+                <div id='viewWorkText'>
+                    <p>Want to view some of my work?</p>
+                </div>
+                <div id='caseStudies'>
+                    
+                    <div class='case-study'>
+                        <a href='https://www.faithchristensen.com/casestudy/2019/8/21/timewyse-app' >
+                            <img src='images/TimeWyseMockup.png' class='case-study-img' />
+                        </a>
+                    </div>
+                    
+                    <div class='case-study'>
+                        <a href='https://www.faithchristensen.com/casestudy/2019/8/2/simple-changes-responsive-design'>
+                            <img src='images/SimpleChangesMockup.png' class='case-study-img' />
+                        </a>
+                        
+                    </div>
+                    <div class='case-study'>
+                        <a href='https://www.faithchristensen.com/casestudy/2019/7/8/rejuv-medspa'>
+                            <img src='images/RejuvMockup.png' class='case-study-img' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='footer'>
+            <div id='footerTextContainer'>
+                <div id='footerText'>
+                    <p>It is clear from MartianCraft’s successful history, and impressive clientele that you have curated a stellar team that I am eager to be apart of, contribute to, and learn from. </p>
+                    <p>Please feel free to reach out with any questions, I am happy to answer</p> 
+                </div>
+            </div>
+
+            <div id='footerSocial'>
+                <div id='socialContainer'>
+                    <div class='social-icon'>
+                        <a href='https://www.linkedin.com/in/faith-christensen/'>
+                        <svg id="linkedin-unauth-icon" viewBox="0 0 64 64">
+                            <path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"></path>
+                        </svg>
+                        </a>
+                    </div>
+                    <div class='social-icon'>
+                            <a href="mailto:faithchristensen111@gmail.com">
+                            <svg id="email-icon" viewBox="0 0 64 64">
+                                <path id='dribbleIcon' d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"></path>
+                            </svg>
+                            </a>
+                    </div>
+                    <div class='social-icon'>
+                            <a href='https://dribbble.com/faithchristensen'>
+                            <svg id="dribbble-icon" viewBox="0 0 64 64">
+                                <path d="M32,48c-8.8,0-16-7.2-16-16s7.2-16,16-16 s16,7.2,16,16S40.8,48,32,48z M45.5,34.2C45,34,41.3,32.9,37,33.6c1.8,4.9,2.5,8.9,2.7,9.7C42.7,41.3,44.9,38,45.5,34.2z M37.3,44.6 c-0.2-1.2-1-5.4-2.9-10.4c0,0-0.1,0-0.1,0c-7.7,2.7-10.5,8-10.7,8.5c2.3,1.8,5.2,2.9,8.4,2.9C33.9,45.7,35.7,45.3,37.3,44.6z  M21.8,41.2c0.3-0.5,4.1-6.7,11.1-9c0.2-0.1,0.4-0.1,0.5-0.2c-0.3-0.8-0.7-1.6-1.1-2.3c-6.8,2-13.4,2-14,1.9c0,0.1,0,0.3,0,0.4 C18.3,35.5,19.7,38.7,21.8,41.2z M18.6,29.2c0.6,0,6.2,0,12.6-1.7c-2.3-4-4.7-7.4-5.1-7.9C22.4,21.5,19.5,25,18.6,29.2z M28.8,18.7 c0.4,0.5,2.9,3.9,5.1,8c4.9-1.8,6.9-4.6,7.2-4.9c-2.4-2.1-5.6-3.4-9.1-3.4C30.9,18.4,29.8,18.5,28.8,18.7z M42.6,23.4 c-0.3,0.4-2.6,3.3-7.6,5.4c0.3,0.7,0.6,1.3,0.9,2c0.1,0.2,0.2,0.5,0.3,0.7c4.5-0.6,9.1,0.3,9.5,0.4C45.6,28.7,44.5,25.7,42.6,23.4z"></path>
+                            </svg>
+                            </a>
+                    </div>
+            </div>
+
+
+
+
+    </div>
+</body>
+</html>
